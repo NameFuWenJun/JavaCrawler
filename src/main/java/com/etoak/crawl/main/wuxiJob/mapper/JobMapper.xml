@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.etoak.crawl.main.wuxiJob.mapper.JobMapper">
+	<resultMap type="com.etoak.crawl.main.wuxiJob.pojo.Job" id="BaseResultMap">
+		<id column="job_id" property="id" />
+		<result column="job_position" property="position" />
+		<result column="job_positionUrl" property="positionUrl" />
+		<result column="job_company" property="company" />
+		<result column="job_companyUrl" property="companyUrl" />
+		<result column="job_place" property="place" />
+		<result column="job_salary" property="salary" />
+		<result column="job_time" property="time" />
+	</resultMap>
+	<insert id="insertJob" parameterType="com.etoak.crawl.main.wuxiJob.pojo.Job">
+		INSERT INTO 51jobforwuxi
+		(
+		job_position,
+		job_positionUrl,
+		job_company,
+		job_companyUrl,
+		job_place,
+		job_salary,
+		job_time
+		)
+		VALUES
+		(
+		#{position},
+		#{positionUrl},
+		#{company},
+		#{companyUrl},
+		#{place},
+		#{salary},
+		#{time}
+		)
+	</insert>
+
+</mapper>
