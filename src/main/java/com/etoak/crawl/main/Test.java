@@ -24,7 +24,7 @@ public class Test {
        Pattern p=Pattern.compile(pattern);
        Matcher m=p.matcher(str1);
        Matcher m1=p.matcher(str2);
-       System.out.println(m.matches()+" "+m1.matches());
+       System.out.println(m.matches()+" "+m1.matches()+"testGit");
       
     
     }
